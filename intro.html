@@ -1,0 +1,35 @@
+<html ng-app="myModule">
+<head>
+    <script src="js/angularjs_v1.5.1.js"></script>
+    <script>
+        var app = angular.module("myModule", []);
+        app.controller("firstCtrl", function ($scope) {
+            $scope.first_name = "Rajesh";
+            $scope.last_name = "Panwar";
+
+        })
+    </script>
+</head>
+<body>
+<h2>ng-model</h2>
+
+<div>
+    Name : <input type="text" ng-model="name"/>
+</div>
+<div>{{name}}</div>
+
+<br/>
+<br/>
+
+<h2>ng-init</h2>
+<div data-ng-init="firstname='ram'"></div>
+<div>First Name : {{firstname}}</div>
+
+<h2> Controller Test</h2>
+<div ng-controller="firstCtrl">
+    <div>first name : {{first_name}}</div>
+    <div>last name : {{last_name}}</div>
+</div>
+
+</body>
+</html>
